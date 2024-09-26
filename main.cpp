@@ -17,8 +17,15 @@ void main(){
                 scanf_s("%d",*(array[i].weight));
                 printf("Введите калорийность на 100 грамм: ");
                 scanf_s("%d",*(array[i].callories));
+                counter++;
+                break;
             }
-            case 2:{}
+            case 2:{
+                int total =0;
+                for(int i = 0; i < counter; i++){
+                    total += array[i].weight * array[i].callories;
+                }
+            }
             case 0:{selector =0;break}
             default:{printf("Неверный номер действия, повторите попытку\n")}
         }
